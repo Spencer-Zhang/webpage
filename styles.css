@@ -21,6 +21,10 @@ img {
   z-index: -1;
 }
 
+img.parallax {
+  position: fixed;
+}
+
 .block {
   position: relative;
   box-sizing: border-box;
