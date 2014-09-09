@@ -6,7 +6,19 @@ html {
 }
 
 body {
+  position: relative;
   height: 100%;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .block {
@@ -14,25 +26,34 @@ body {
   box-sizing: border-box;
   margin: 0; padding: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .full {
   font-size: 80px;
   width: 100%;
-  height: 100%;
+  height: 92%;
+  min-height: 300px;
 }
 
 .title {
-  top: 30%;
+  position: absolute;
+  bottom: 10%;
+  width: auto
+}
+
+.title>span {
+  color: white;
 }
 
 .blurb {
   color: black;
   font-size: 40px;
-  margin-left: 20%;
   padding-top: 5px;
   padding-bottom: 10px;
-  font-family: 'Helvetica', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 5px solid black;
 }
 
 .row {
@@ -55,9 +76,10 @@ body {
   position: absolute;
   font-size: 40px;
   width: 100%;
+  font-family: "Helvetica", sans-serif;
 }
 
-.quarters:hover {
+.quarters:hover>span {
   font-family: 'Pacifico', cursive;
 }
 
@@ -65,11 +87,30 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  opacity: 0.95;
 }
 
-.red    { background-color: red;}
-.blue   { background-color: blue;   color: white;}
-.green  { background-color: green; }
-.yellow { background-color: yellow; }
-.brown  { background-color: brown; }
+.c1 { background-color: #33DDD0;}
+.c2 { background-color: #34BD78; }
+.c3 { background-color: #68BA89; }
+.c4 { background-color: #AEBABB; }
+.c5 { background-color: #664444;}
+
+.quarters:hover .c1 { background-color: #53FFFF;}
+.quarters:hover .c2 { background-color: #64DDA8; }
+.quarters:hover .c3 { background-color: #88DAB9; }
+.quarters:hover .c4 { background-color: #BEDAFB; }
+
+
+
+@media only screen and (min-device-width: 700px) and (min-width: 700px) {
+  .title {
+    padding-left: 30%;
+    width: 70%;
+  }
+
+  .blurb {
+    border-left: 5px solid black;
+  }
+
+}
