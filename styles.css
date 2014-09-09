@@ -2,12 +2,16 @@ html {
   display: block;
   height: 100%;
   white-space-collapse: discard;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   position: relative;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -23,6 +27,7 @@ img {
 }
 
 img.parallax {
+  top: 0px;
   position: fixed;
 }
 
@@ -60,6 +65,7 @@ img.parallax {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  border-top: 2px solid black;
   border-bottom: 5px solid black;
 }
 
@@ -102,6 +108,7 @@ img.parallax {
   height: 100%;
   width: 100%;
   opacity: 0.95;
+  z-index: -1;
 }
 
 .c1 { background-color: #33DDD0;}
@@ -116,6 +123,73 @@ img.parallax {
 .quarters:hover .c4 { background-color: #BEDAFB; }
 
 
+
+menu {
+  background-color: #222222;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+menu a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: 'Trocchi', serif;
+  font-size: 30px;
+  padding: 10px;
+}
+
+menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+menu li {
+  border: 1px solid #666666;
+}
+
+menu li:hover {
+  background-color: #444444;
+}
+
+
+header {
+  display: block;
+  padding-top: 260px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+
+main {
+  margin: 0px;
+  padding: 0px;
+  overflow:; hidden;
+}
+
+section {
+  display: block;
+  min-height: 100%;
+  padding: 20px 40px 40px;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  font-size: 40px;
+  font-family: 'Trocchi', serif;
+}
+
+
+
+
+/* For responsive design */
 
 @media only screen and (min-device-width: 700px) and (min-width: 700px) {
   .title {
@@ -132,4 +206,31 @@ img.parallax {
     padding-left: 30px;
   }
 
+  menu {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 200px;
+  }
+
+  main {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-left: 200px;
+    width: auto;
+  }
+
+  main img {
+    left: 200px;
+  }
+
+  header {
+    padding-top: 300px;
+    padding-left: 60px;
+  }
+
+  section {
+    padding-top: 30px;
+    padding-left: 60px;
+  }
 }
