@@ -2,7 +2,6 @@ html {
   display: block;
   height: 100%;
   white-space-collapse: discard;
-  font-family: 'Times New Roman', serif;
 }
 
 body {
@@ -12,12 +11,14 @@ body {
 }
 
 img {
+  display: block;
+  margin: 0 auto;
   position: absolute;
   left: 0px;
   min-width: 100%;
   min-height: 100%;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -34,25 +35,27 @@ img.parallax {
 }
 
 .full {
-  font-size: 80px;
   width: 100%;
-  height: 92%;
+  height: 90%;
   min-height: 300px;
 }
 
 .title {
   position: absolute;
   bottom: 10%;
-  width: auto
+  width: 100%
 }
 
 .title>span {
+  font-size: 70px;
+  font-family: 'Trocchi', serif;
   color: white;
 }
 
 .blurb {
-  color: black;
-  font-size: 40px;
+  color: #333333;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
   padding-top: 5px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -71,6 +74,7 @@ img.parallax {
   width: 50%;
   height: 100%;
   text-align: baseline;
+  color: #222222;
 }
 
 .quarters>span {
@@ -80,11 +84,17 @@ img.parallax {
   position: absolute;
   font-size: 40px;
   width: 100%;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.quarters:hover {
+  cursor: pointer;
 }
 
 .quarters:hover>span {
   font-family: 'Pacifico', cursive;
+  line-height: 56px;
 }
 
 .overlay {
@@ -98,7 +108,7 @@ img.parallax {
 .c2 { background-color: #34BD78; }
 .c3 { background-color: #68BA89; }
 .c4 { background-color: #AEBABB; }
-.c5 { background-color: #664444;}
+.c5 { background-color: #332222;}
 
 .quarters:hover .c1 { background-color: #53FFFF;}
 .quarters:hover .c2 { background-color: #64DDA8; }
@@ -115,6 +125,7 @@ img.parallax {
 
   .blurb {
     border-left: 5px solid black;
+    padding-left: 30px;
   }
 
 }
