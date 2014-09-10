@@ -3,15 +3,11 @@ html {
   height: 100%;
   white-space-collapse: discard;
   font-family: 'Open Sans', sans-serif;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
   position: relative;
   height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 img {
@@ -27,7 +23,6 @@ img {
 }
 
 img.parallax {
-  top: 0px;
   position: fixed;
 }
 
@@ -61,12 +56,12 @@ img.parallax {
   color: #333333;
   font-size: 30px;
   font-family: 'Open Sans', sans-serif;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 4px 10px 10px;
+  box-sizing: border-box;
+  width: auto;
   border-top: 2px solid black;
   border-bottom: 5px solid black;
+  overflow: hidden;
 }
 
 .row {
@@ -105,22 +100,23 @@ img.parallax {
 
 .overlay {
   position: absolute;
+  left: 0;
   height: 100%;
   width: 100%;
   opacity: 0.95;
   z-index: -1;
 }
 
-.c1 { background-color: #33DDD0;}
-.c2 { background-color: #34BD78; }
-.c3 { background-color: #68BA89; }
-.c4 { background-color: #AEBABB; }
-.c5 { background-color: #332222;}
+.c1 { background-color: #FEF3D5;}
+.c2 { background-color: #FEF3D5; }
+.c3 { background-color: #FEF3D5; }
+.c4 { background-color: #FEF3D5; }
+.c5 { background-color: #2F1E28;}
 
-.quarters:hover .c1 { background-color: #53FFFF;}
-.quarters:hover .c2 { background-color: #64DDA8; }
-.quarters:hover .c3 { background-color: #88DAB9; }
-.quarters:hover .c4 { background-color: #BEDAFB; }
+.quarters:hover .c1 { background-color: #FBB958;}
+.quarters:hover .c2 { background-color: #FBB958; }
+.quarters:hover .c3 { background-color: #FBB958; }
+.quarters:hover .c4 { background-color: #FBB958; }
 
 
 
@@ -150,7 +146,8 @@ menu ul {
 }
 
 menu li {
-  border: 1px solid #666666;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
 }
 
 menu li:hover {
@@ -167,6 +164,7 @@ header {
 
 
 main {
+  position: relative;
   margin: 0px;
   padding: 0px;
   overflow:; hidden;

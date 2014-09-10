@@ -1,4 +1,4 @@
-var PARALLAX_DEPTH = 0.5;
+var PARALLAX_DEPTH = 0.3;
 
 $(function() {
   $(window).scroll(function() {
